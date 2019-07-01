@@ -19,7 +19,7 @@ local M = {}
 
 function M:_init()
   if self._ihr_pair_to_bucket == nil then
-    local f = assert(io.open("./Bucketing/riverihr.dat", "rb"))
+    local f = assert(io.open("/root/forkholdem/Nn/Bucketing/riverihr.dat", "rb"))
     local data = f:read("*all")
 
     self._river_ihr = {}
@@ -34,7 +34,7 @@ function M:_init()
     end
     f:close()
 
-    local f = assert(io.open("./Bucketing/rcats.dat", "r"))
+    local f = assert(io.open("/root/forkholdem/Nn/Bucketing/rcats.dat", "r"))
     self.river_buckets = f:read("*number")
     self._ihr_pair_to_bucket = {}
     for i = 1, self.river_buckets do
@@ -47,7 +47,7 @@ function M:_init()
 
   if self._turn_means == nil then
     self._turn_means = {}
-    local f = assert(io.open("./Bucketing/turn_means.dat"))
+    local f = assert(io.open("/root/forkholdem/Nn/Bucketing/turn_means.dat"))
     local num_means = f:read("*number")
     for i = 1,num_means do
       local dist = {}
@@ -61,7 +61,7 @@ function M:_init()
 
   if self._turn_cats == nil then
     self._turn_cats = {}
-    local f = assert(io.open("./Bucketing/turn_dist_cats.dat", "rb"))
+    local f = assert(io.open("/root/forkholdem/Nn/Bucketing/turn_dist_cats.dat", "rb"))
     local data = f:read("*all")
 
     for i = 1, string.len(data), 6 do
@@ -78,7 +78,7 @@ function M:_init()
   end
   if self._flop_cats == nil then
     self._flop_cats = {}
-    local f = assert(io.open("./Bucketing/flop_dist_cats.dat", "rb"))
+    local f = assert(io.open("/root/forkholdem/Nn/Bucketing/flop_dist_cats.dat", "rb"))
     local data = f:read("*all")
 
     for i = 1, string.len(data), 6 do

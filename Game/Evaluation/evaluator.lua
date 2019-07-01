@@ -28,7 +28,7 @@ function M:_init()
     end
   end
   if self._texas_lookup == nil then
-    local f = assert(io.open("./HandRanks.dat", "rb"))
+    local f = assert(io.open("/root/forkholdem/Game/Evaluation/HandRanks.dat", "rb"))
     local data = f:read("*all")
     self._texas_lookup = arguments.Tensor(string.len(data) / 4):fill(0):long()
     if arguments.gpu then

@@ -34,7 +34,7 @@ function TerminalEquity:__init()
   self.matrix_mem = arguments.Tensor()
 
   if self._pf_equity == nil then
-    local f = assert(io.open("./pf_equity.dat", "rb"))
+    local f = assert(io.open("/root/forkholdem/TerminalEquity/pf_equity.dat", "rb"))
     local data = f:read("*all")
     self._pf_equity = arguments.Tensor(game_settings.hand_count,game_settings.hand_count):fill(0)
 

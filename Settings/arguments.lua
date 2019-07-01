@@ -19,7 +19,7 @@ params.acpc_server_port = 16177
 --- the tensor datatype used for storing DeepStack's internal data
 params.Tensor = torch.FloatTensor
 --- the directory for data files
-params.data_directory = './Data/'
+params.data_directory = '/root/forkholdem/Data/'
 --- the size of the game's ante, in chips
 params.ante = 100
 params.sb = 50
@@ -35,9 +35,9 @@ params.gen_batch_size = 10
 --- how many poker situations are used in each neural net training batch
 params.train_batch_size = 1000
 --- path to the solved poker situation data used to train the neural net
-params.data_path = './Data/TrainSamples/'
+params.data_path = '/root/forkholdem/Data/TrainSamples/'
 --- path to the neural net model
-params.model_path = './Data/Models/'
+params.model_path = '/root/forkholdem/Data/Models/'
 --- the name of the neural net file
 params.value_net_name = 'final'
 --- the neural net architecture
@@ -47,7 +47,7 @@ params.save_epoch = 1
 --- how many epochs to train for
 params.epoch_count = 200
 --- how many solved poker situations are generated for use as training examples
-params.train_data_count = 150000
+params.train_data_count = 1000000
 --- how many solved poker situations are generated for use as validation examples
 params.valid_data_count = 150000
 --- learning rate for neural net training
