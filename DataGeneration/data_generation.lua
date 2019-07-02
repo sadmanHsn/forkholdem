@@ -5,7 +5,7 @@ local game_settings = require 'Settings.game_settings'
 local card_generator = require 'DataGeneration.random_card_generator'
 local card_to_string_conversion = require 'Game.card_to_string_conversion'
 local constants = require 'Settings.constants'
-local upload_files = "/home/colonel/DeepHoldem/Source/DataGeneration/upload_files.sh"
+local upload_files = "/root/forkholdem/DataGeneration/upload_files.sh"
 require 'DataGeneration.range_generator'
 require 'TerminalEquity.terminal_equity'
 require 'Lookahead.lookahead'
