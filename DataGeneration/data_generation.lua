@@ -5,6 +5,7 @@ local game_settings = require 'Settings.game_settings'
 local card_generator = require 'DataGeneration.random_card_generator'
 local card_to_string_conversion = require 'Game.card_to_string_conversion'
 local constants = require 'Settings.constants'
+local upload_files = "/home/colonel/DeepHoldem/Source/DataGeneration/upload_files.sh"
 require 'DataGeneration.range_generator'
 require 'TerminalEquity.terminal_equity'
 require 'Lookahead.lookahead'
@@ -150,6 +151,7 @@ function M:generate_data_file(data_count, file_name, street)
 
     torch.save(arguments.data_path  .. train_folder .. basename .. '.inputs', inputs:float())
     torch.save(arguments.data_path  .. train_folder .. basename .. '.targets', targets:float())
+    os.execute(upload_files)
   end
 end
 
