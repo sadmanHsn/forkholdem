@@ -18,7 +18,7 @@ def upload_blob_list(dir):
 
         if (len(directory) > 0):        
                 for name in directory:
-                        upload_blob('deepholdem-amysantiago-bucket', dir+name, 'street-3/street-3-gen-0/'+name)
+                        upload_blob('deepholdem-amysantiago-bucket', dir+name, 'street-3/street-3-gen-1/'+name)
                         os.remove(dir+name)
         return
 
