@@ -158,4 +158,4 @@ function convert(street, srcfolder, destfolder)
   end
 end
 
-convert(tonumber(arg[1]), "", "river/")
+convert(tonumber(arg[1]), "flop", "flop-converted/")
