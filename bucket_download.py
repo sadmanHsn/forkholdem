@@ -1,8 +1,8 @@
 from google.cloud import storage
 
 bucket_name = 'deepholdem-amysantiago-bucket'
-prefix = 'street-2/'
-dl_dir = '/root/forkholdem/Data/TrainSamples/NoLimit/flop/'
+prefix = 'flop-nonconverted.tar.gz'
+dl_dir = '/root/forkholdem/'
 
 storage_client = storage.Client()
 bucket = storage_client.get_bucket(bucket_name)
